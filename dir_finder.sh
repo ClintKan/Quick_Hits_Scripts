@@ -7,7 +7,7 @@ read name_find #Input of the name
 
 finder_que=$(ls -al | grep "$name_find") #Listing the contents and then grep-ing the name of the file only and filing them
 
-#Using an if statement to check if iun the file somehting exists
+#Using an if statement to check if the file somehting exists
 if [ "$finder_que" ]
   then
     echo "Exists in this directory."
