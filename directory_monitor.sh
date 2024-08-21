@@ -13,7 +13,7 @@ if [ "$usr_inpt" == "yes" ]; then
   echo "Please input the file or the absolute path of the directory"
   read filedir_input
 
-    if [ -d "$filedir_input"  ]; then #checking if the file/directory exists
+    if [ -d "$filedir_input" ]; then #checking if the file/directory exists
         filedir_size=$(du $filedir_input | tail -n 1 | awk '{print$1}') #extracting only the size of the file/directory from the output 
         if [ $filedir_size -gt 102400 ]; then #checking if the figure-size is greater than 100MB
           echo $filedir_input "exceeds 100MB"
