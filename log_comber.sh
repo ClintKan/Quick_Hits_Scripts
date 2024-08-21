@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Script that combs through a log file foir 404 errors - finding the number of times an IP and its corresponding 404 error shows up
+#Script that combs through a log file for 404 errors - finding the number of times an IP and its corresponding 404 error shows up
 
 echo "Enter the file - with it's entire path i.e. /home/ubuntu/myfile.log"
 
@@ -18,6 +18,6 @@ tr -s ' ' '\n' < log_review3.txt | sort | uniq -c  > temp_logcomber.txt #organiz
 
 sort -nr temp_logcomber.txt > log_comber.txt #sort the contents in the temp_logcomber.txt with the one with the highest count on top
 
-rm log_review.txt && rm log_review2.txt && rm log_review3.txt & rm temp_logcomber.txt # clear out the temp files
+rm log_review.txt && rm log_review2.txt && rm log_review3.txt && rm temp_logcomber.txt # clear out the temp files
 
 echo "The sorted file named log_comber.txt has been created in the same directory you currently in. You may open it now."
