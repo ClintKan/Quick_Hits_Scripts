@@ -15,6 +15,6 @@ if [-f $source_filepath]; then
     #flags; -w for whole word and -o for only the word itself
     word_apps=$(grep -wo "$word_find" "$source_filepath" | wc -l | sed 's/ //g') 
     
-    echo "The word $word_find shows up $word_apps times in the file $source_filepath."
+    echo "The word '$word_find' shows up $word_apps times in the file $source_filepath."
 else
     echo "The file $source_filepath doesn't exist."
