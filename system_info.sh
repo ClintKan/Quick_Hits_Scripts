@@ -47,7 +47,8 @@ Logic () {
 
             elif [ $menu_input -eq 6 ]; then
                 echo "Below is a table showing the top CPU currently running..."
-                ps aux --sort=-%cpu | awk '{print $3, $2, $11}' | head -n 6 #top 5 processes sorted by cpu
+                ps aux | awk 'NR==1{print $3, $2, $11}' #printing the headers/heading of the table
+                ps aux | awk '{print $3, $2, $11}' | sort -nr | head -n 5 #top 5 processes sorted by cpu
 
             elif [ $menu_input -eq 7 ]; then
                 echo "Please input the website you would like to know the connection time for..."
