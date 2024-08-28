@@ -42,7 +42,8 @@ Logic () {
 
             elif [ $menu_input -eq 5 ]; then
                 echo "Below is a table showing the top Processes currently running..."
-                ps aux --sort=-%mem | awk '{print $4, $2, $11}' | head -n 6  #top 5 processes sorted by memory
+                ps aux | awk 'NR==1{print $4, $2, $11}' #printing the headers/heading of the table
+                ps aux | awk '{print $4, $2, $11}' | sort -nr | head -n 5 #top 5 processes sorted by memory
 
             elif [ $menu_input -eq 6 ]; then
                 echo "Below is a table showing the top CPU currently running..."
