@@ -6,4 +6,4 @@ files_count = 0
 
 dir = input ("Which directory do you want to do the search in?\n")
 
-print(os.listdir(dir))
+print(len(os.listdir(dir)))
