@@ -11,7 +11,7 @@ gn_list=$(find $path_input -type f -name "*.sh") #finding all .sh files and stor
 
 echo "Here is the state of the files before making them executable;"
 
-ls -al $path_input
+ls -alR $path_input
 
 rm -f file_list.txt #deleting this temp file incase it exists => flag -f for silence
 
