@@ -1,0 +1,3 @@
+0	/home/ubuntu/quick_scripts/tempoutput_list.txt
+0	/home/ubuntu/quick_scripts/snacks.txt
+0	/home/ubuntu/quick_scripts/beach.stuff.txt
