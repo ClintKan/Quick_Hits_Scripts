@@ -1,13 +1,17 @@
 #!/bin/bash
 
 #Introduction
-echo "Welcome to this script that finds un-executable bash files..."
+echo "Welcome to this script that finds non-executable bash files..."
 echo "...and makes them executable."
 
 #Requesting user to input the path where the search is to be done
 echo "Enter the absolute path of the folder you would want the script to sweep through."
 read path_input
 gn_list=$(find $path_input -type f -name "*.sh") #finding all .sh files and storing them
+
+echo "Here is the state of the files before making them executable;"
+
+ls -al $path_input
 
 rm -f file_list.txt #deleting this temp file incase it exists => flag -f for silence
 
@@ -26,7 +30,7 @@ else #if the list isn't empty, there are inexecutable files
         echo "These are the no new inexecutable files."
 
     else #if the file exists, i.e. was created
-        echo "These are the executable files..."
+        echo "These are the non-executable files..."
         cat file_list.txt
 
         echo " "
