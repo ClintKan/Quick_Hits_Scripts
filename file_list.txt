@@ -1,0 +1,6 @@
+/home/ubuntu/quick_scripts/update_upgrade.sh
+/home/ubuntu/Monitoring_C5/monitorpractice_promgraf/prometheusyml.sh
+/home/ubuntu/analyz_logfiles_hw/install-sh/vscode_install.sh
+/home/ubuntu/analyz_logfiles_hw/install-sh/auth_log_creation.sh
+/home/ubuntu/.local/share/code-server/extensions/ms-python.debugpy-2024.8.0-linux-x64/bundled/libs/debugpy/_vendored/pydevd/pydevd_attach_to_process/linux_and_mac/compile_mac.sh
+/home/ubuntu/.local/share/code-server/extensions/ms-python.debugpy-2024.8.0-linux-x64/bundled/libs/debugpy/_vendored/pydevd/pydevd_attach_to_process/linux_and_mac/compile_linux.sh
