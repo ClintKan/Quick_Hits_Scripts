@@ -23,7 +23,7 @@ Logic () {
         echo " "
 
         if [ $menu_input -eq 1 ]; then
-            internal_ip=$(ifconfig | awk 'NR==2{print $2}') #internal ip address
+            internal_ip=$(hostname -I ) #$(ifconfig | awk 'NR==2{print $2}') #internal ip address
             public_ip=$(curl ifconfig.me) #public address
             echo "IP Addresses:" "Your internal IP is" $internal_ip", and your public IP is" $public_ip
 
