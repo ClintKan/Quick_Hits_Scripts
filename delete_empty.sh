@@ -39,7 +39,7 @@ fi
 empty_dir=$(find $path_input -type d -empty)
 
 # finding the empty directories using the "find" command and listing them out
-echo "These are the empty files found in within the directory path you provided.."
+echo "These are the empty folders/directories found in within the directory path you provided.."
 i=1
 for item in $empty_dir; do
     echo "$i. $item"
