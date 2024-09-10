@@ -17,7 +17,7 @@ echo "Searching the usernames.txt...."
 # a loop statement if username exists in list or not
 
 # username search in list but with a condition of..usrname must be at the beginning of the line
-if grep -q "^$usr_input" "./usernames.txt"; then #^  line 18 comment
+if grep -q "^$usr_input" "./usernames.txt"; then # ^ = line 19 comment
     echo "User '$usr_input' exists."
 
 # separation using cut, with : as the delimieter (-d), and -f6 being the 6th place delimited
