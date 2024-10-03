@@ -27,3 +27,39 @@ while true; do #loop to keep asking user
     fi
 
 done
+
+
+# #!/bin/bash
+
+# # A script that checks if a process is running.... &
+# # ....prompting if it should be closed or not
+
+# #assign a variable to the entry of the word as the script is being run
+# usr_prcsname=$1
+
+# prcs_count=$(pgrep -f $usr_prcsname | wc -l)
+# prcs_rng=$(pgrep -f $usr_prcsname)
+# #check the running of the process - and how many child-process exist
+# #using an if else loop - and if exists, ask whetther to kill or keep open
+# if [ $prcs_count -gt 0 ]; then
+#     echo "The process $usr_prcsname is running..."
+#     echo " "
+#     echo "Would you want to end/kill the process?(Yes/no)"
+#     read usr_input
+#     usr_input=${usr_input,,}
+
+#     if [ $usr_input == "yes" ] ; then
+#         for pcs in $prcs_rng; do
+#             pkill -9 $pcs
+#         done
+#         echo " "
+#         echo "Process $usr_prcsname killed."
+        
+#     elif [ $usr_input == "no" ] ; then
+#         echo "Gotcha. Process not terminated."
+#     else
+#         echo "Wrong input - try again, but entering yes or no."
+#     fi
+# else
+#     echo "The process $usr_prcsname isn't running."
+# fi
