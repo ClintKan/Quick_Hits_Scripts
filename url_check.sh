@@ -7,19 +7,20 @@ echo " "
 
 echo "Please enter the url below..."
 read usr_url
+echo " "
 
 url_statuscode=$(curl --head --silent $usr_url | awk 'NR==1 {print $2}')
 
 if [ $url_statuscode -eq 200 ]; then
     echo "The URL '$usr_url' is reachable"
     echo "HTTP Status Code: $url_statuscode"
-elif [ $url_statuscode -eq 301 || $url_statuscode -eq 302 || $url_statuscode -eq 304 ]; then
+elif [[ $url_statuscode -eq 301 || $url_statuscode -eq 302 || $url_statuscode -eq 304 ]]; then
     echo "The URL '$usr_url' has moved - it's being redirected"
     echo "HTTP Status Code: $url_statuscode"
-elif [ $url_statuscode -eq 400 || $url_statuscode -eq 401 || $url_statuscode -eq 403 || $url_statuscode -eq 404 || $url_statuscode -eq 408 ]; then
+elif [[ $url_statuscode -eq 400 || $url_statuscode -eq 401 || $url_statuscode -eq 403 || $url_statuscode -eq 404 || $url_statuscode -eq 408 ]]; then
     echo "The URL '$usr_url' is unreachable and it is on the customer's side"
     echo "HTTP Status Code: $url_statuscode"
-elif [ $url_statuscode -eq 500 || $url_statuscode -eq 502 || $url_statuscode -eq 503 || $url_statuscode -eq 504 ]; then
+elif [[ $url_statuscode -eq 500 || $url_statuscode -eq 502 || $url_statuscode -eq 503 || $url_statuscode -eq 504 ]]; then
     echo "The URL '$usr_url' is unreachable and it is on the devleoper's side"
     echo "HTTP Status Code: $url_statuscode"
 elif [ $url_statuscode -eq 000 ]; then
