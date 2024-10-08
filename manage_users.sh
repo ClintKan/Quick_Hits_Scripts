@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # A script that searches the user's (usernames) directory for a specified username
 
 

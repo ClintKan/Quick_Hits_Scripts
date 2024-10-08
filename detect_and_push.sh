@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # A Program that detects new files / changes in a folder
 # And then pushes those changes to an online gihub repo
 
