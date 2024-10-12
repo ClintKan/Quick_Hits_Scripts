@@ -7,7 +7,8 @@ echo "....(systemd, htop, git, python3, curl, nmap, apt)"
 pakg_list=("systemd" "htop" "git" "python3" "curl" "nmap" "apt")
 
 for pakg in ${pakg_list[@]}; do
-     if dpkg -l $pakg &> /dev/null; then
+     if dpkg -l $pakg &> /dev/null; then #using &> /debv/null for "silent" mode
+          #to extract the version of the package only - w/o the verbose
           pakg_vrsn=$(dpkg -l $pakg 2>/dev/null | awk 'NR==6 {print $3}')
           echo "'$pakg' is installed, version $pakg_vrsn"
      else
