@@ -16,10 +16,10 @@ for pakg in ${pakg_list[@]}; do
           #OR
           usr_inpt=${usr_input,,}
 
-          if [ usr_inpt == "yes" ]
+          if [ $usr_inpt == "yes" ]
                echo "Got it! Installing '$pakg'"
                sudo apt install $pakg -y
-          elif [ usr_inpt == "no" ]
+          elif [ $usr_inpt == "no" ]
                echo "Got it! Not installing '$pakg'"
           else
                echo "Wrong input - try again and enter either yes or no."
