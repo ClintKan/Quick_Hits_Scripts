@@ -10,9 +10,11 @@ threshold=75
 #summing up all categories that would indicate CPU usage
 #us=user time, sy=system time, ni= nice time, wa=i/o wait time
 #hi=hardware interrupts, st=steak time
-usage=$(top -b -n 1 | grep "%Cpu(s)" | awk '{print $2 + $3 + $4 + $6 + $7 + $8 + $9}')
+usage=$(top -b -n 1 | grep "%Cpu(s)" | awk '{print $2 + $4 + $6 + $9 + $11 + $13 + $15}')
 
-if [ $usage > $threshoold ]; then
+# the if condition below is used because usage returns a float, while threshold is an int
+# bc - is a float calculator & -l is to load the math lib
+if (( $(echo "$usage > $threshold" | bc -l) )); then
     echo "CPU usage: 75% (Threshold exceeded)"
     echo "Logging event to 'cpu_usage_log.txt'........"
 
